@@ -47,19 +47,26 @@ describe('MultiDimensionalArray', function() {
         
         result.forEach(function(x){
           x.forEach(function(y){
-              expect(y).to.satisfy(function(y){ return y < 2;
+            expect(y).to.satisfy(function(y){ return y < 2;
               });
           });
+      });
+});
+     it("should return 4 elements with 3 elements in it",function(){
 
-      
+          var result = mda.generate_2d(4);
+         //  result.should.have.length(4);
 
-           
+             
+          //  expect(result).to.have.length(4);
+             });
         });
+           
+       });
       
 
-    });
+   
 
-     
-    }); 
+  
+  
 
-}); 

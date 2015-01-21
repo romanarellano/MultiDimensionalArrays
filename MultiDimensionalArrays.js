@@ -21,15 +21,18 @@ module.exports = {
         return  arr;
       }
 
-      // else if(arguments)
+     
     },
 
 
-    generate_2d : function (num1) {
+    generate_2d : function(num1) {
      
       var arr=[];
-      element=new Array(3);
-      for(var i=0;i<3;i++){
+      element=new Array(num1);
+
+      if(num1===undefined){
+
+         for(var i=0;i<3;i++){
     
           for(var j=0;j<3;j++){
               arr[j]=(Math.floor(Math.random()*2));
@@ -39,7 +42,17 @@ module.exports = {
       }
           return element;
 
-
-    }
-  
+}
+      else if(arguments.length===1){
+      for(var m=0;m<num1;m++){
+    
+          for(var k=0;k<3;k++){
+              arr[k]=(Math.floor(Math.random()*2));
+                
+          }
+          element[m]=arr;
+      }
+          return element;
+      }
+  }
 };
