@@ -55,11 +55,27 @@ describe('MultiDimensionalArray', function() {
      it("should return 4 elements with 3 elements in it",function(){
 
           var result = mda.generate_2d(4);
-         //  result.should.have.length(4);
+            result.should.have.length(4);
 
-             
-          //  expect(result).to.have.length(4);
+            result.forEach(function(v){
+            expect(v).to.have.length(3);
+
+            });
+          
              });
+
+
+    it("should return first parameter array length and second parameter array length for each element",function(){
+
+        var result= mda.generate_2d(4,5);
+        result.should.have.length(4);
+        result.forEach(function(element){
+            expect(element).to.have.length(5);
+          element.forEach(function(y){
+            expect(y).to.satisfy(function(y){ return y < 2;});
+              });
+          });
+        });
         });
            
        });

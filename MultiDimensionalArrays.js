@@ -25,7 +25,7 @@ module.exports = {
     },
 
 
-    generate_2d : function(num1) {
+    generate_2d : function(num1,num2) {
      
       var arr=[];
       element=new Array(num1);
@@ -54,5 +54,18 @@ module.exports = {
       }
           return element;
       }
-  }
+
+      else 
+           for(var n=0;n<num1;n++){
+    
+          for(var o=0;o<num2;o++){
+              arr[o]=(Math.floor(Math.random()*2));
+                
+          }
+          element[n]=arr;
+      }
+          return element;
+  },
+
+
 };
