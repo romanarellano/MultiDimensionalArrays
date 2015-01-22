@@ -76,9 +76,21 @@ describe('MultiDimensionalArray', function() {
               });
           });
         });
-        });
-           
-       });
+
+    it("shoud return @param3 nested into @param2 and @param2 nested inside @param1",function(){
+          var result = mda.generate_3d(3,4,5);
+          result.should.have.length(3);
+
+          result.forEach(function(secondArg){
+              expect(secondArg).to.have.length(4);
+              secondArg.forEach(function(thirdArg){
+                  expect(thirdArg).to.have.length(5);
+            });
+          });
+
+            });
+          });
+            });
       
 
    

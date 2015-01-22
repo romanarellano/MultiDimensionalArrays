@@ -67,5 +67,32 @@ module.exports = {
           return element;
   },
 
+      generate_3d: function(num1,num2,num3){
+
+
+
+   element=[];
+   nested1=[];
+   nested2=[];
+ 
+for(var i=0;i<num1;i++){
+   
+          for(var j=0;j<num2;j++){
+             
+            element=[];
+             
+              for(var k=0;k<num3;k++){
+                  
+                  element[k]=Math.floor(Math.random()*2);
+              }
+                nested1[j]=element;
+                
+          }
+          nested2.push(nested1);
+      }
+    return nested2;
+
+      }
+
 
 };
