@@ -2,6 +2,7 @@ var chai = require('chai');
 var expect = chai.expect;
 var should = chai.should();
 var mda = require('./../MultiDimensionalArrays.js'); 
+var mda2 = require('./test-counter.js');
  
 describe('MultiDimensionalArray', function() {
   describe('Generate Function', function () {
@@ -89,8 +90,23 @@ describe('MultiDimensionalArray', function() {
           });
 
             });
+
+
           });
             });
+
+
+      describe('test-counter',function(){
+
+          it("should count all the ones of the array",function(){
+
+                var result = mda2.count([1,0,0,1,0,0,0,0,1]);
+                expect(result).to.equal(3);
+
+
+          });
+
+      });
       
 
    
