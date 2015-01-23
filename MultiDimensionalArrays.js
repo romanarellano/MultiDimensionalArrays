@@ -13,17 +13,18 @@ module.exports = {
         
       }
         return arr;
-    }
+    
    //if num argument is a string return []
    //else create array with num elements with 1 and 0's
-   else if(arguments.length===1) {
-     if(typeof num === 'string'){
+   } else if(arguments.length===1) {
+        if(typeof num === 'string'){
         return [];
      }
-      for(var k=0;k<num;k++)
+        for(var k=0;k<num;k++){
           arr[k]=Math.round(Math.random());
+        }
         return  arr;
-    }
+   }
 
      
 },
@@ -49,10 +50,10 @@ module.exports = {
           
           return element;
 
-      }
+      
       //if num1 exists, create outer array with num1 elements and inner
       //array with a 3 element length.
-      else if(arguments.length===1){
+      } else if(arguments.length===1){
           for(var m=0;m<num1;m++){
     
             for(var k=0;k<3;k++){
@@ -63,10 +64,10 @@ module.exports = {
           }
           
           return element;
-      }
+      
       //if num1 and num2 are given, create num1 number of outer array elements
       //and num2 number of inner array elements.
-      else 
+      } else {
           for(var n=0;n<num1;n++){
     
             for(var o=0;o<num2;o++){
@@ -77,7 +78,7 @@ module.exports = {
           }
           
           return element;
-  },
+  }},
       /*create 3 scopes of arrays:
       * outer array = num1 elements
       * middle array = num2 elements
