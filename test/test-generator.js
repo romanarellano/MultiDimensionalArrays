@@ -49,10 +49,10 @@ describe('MultiDimensionalArray', function() {
         result.forEach(function(innerArray){
           innerArray.forEach(function(element){
             expect(element).to.satisfy(function(element){ return element < 2;
-              });
-          });
-      });
-    });
+                });
+            });
+         });
+     });
      it("should return 4 elements with 3 elements on each element",function(){
 
           var result = mda.generate_2d(4);
@@ -75,7 +75,7 @@ describe('MultiDimensionalArray', function() {
             firstNestedArray.forEach(function(element){
             expect(element).to.satisfy(function(element){ return element < 2;});
               });
-            });
+          });
         });
 
     it("shoud return @param3 nested into @param2 and @param2 nested inside @param1",function(){
@@ -86,13 +86,12 @@ describe('MultiDimensionalArray', function() {
               expect(secondArg).to.have.length(4);
               secondArg.forEach(function(thirdArg){
                   expect(thirdArg).to.have.length(5);
-            });
+                  });
+              });
           });
 
-            });
-
-          });
-            });
+    });
+});
 
 
       describe('test-counter',function(){
