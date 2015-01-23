@@ -2,7 +2,7 @@ module.exports = {
         
           
 
-       
+       //count the number of 1's in the single array
         
         count : function(array){
 

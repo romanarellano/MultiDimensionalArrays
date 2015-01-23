@@ -46,36 +46,36 @@ describe('MultiDimensionalArray', function() {
         
 
         
-        result.forEach(function(x){
-          x.forEach(function(y){
-            expect(y).to.satisfy(function(y){ return y < 2;
+        result.forEach(function(innerArray){
+          innerArray.forEach(function(element){
+            expect(element).to.satisfy(function(element){ return element < 2;
               });
           });
       });
-});
-     it("should return 4 elements with 3 elements in it",function(){
+    });
+     it("should return 4 elements with 3 elements on each element",function(){
 
           var result = mda.generate_2d(4);
             result.should.have.length(4);
 
-            result.forEach(function(v){
-            expect(v).to.have.length(3);
+            result.forEach(function(first_inner_array){
+            expect(first_inner_array).to.have.length(3);
 
             });
           
-             });
+            });
 
 
     it("should return first parameter array length and second parameter array length for each element",function(){
 
         var result= mda.generate_2d(4,5);
         result.should.have.length(4);
-        result.forEach(function(element){
-            expect(element).to.have.length(5);
-          element.forEach(function(y){
-            expect(y).to.satisfy(function(y){ return y < 2;});
+        result.forEach(function(firstNestedArray){
+            expect(firstNestedArray).to.have.length(5);
+            firstNestedArray.forEach(function(element){
+            expect(element).to.satisfy(function(element){ return element < 2;});
               });
-          });
+            });
         });
 
     it("shoud return @param3 nested into @param2 and @param2 nested inside @param1",function(){
@@ -91,7 +91,6 @@ describe('MultiDimensionalArray', function() {
 
             });
 
-
           });
             });
 
@@ -104,9 +103,9 @@ describe('MultiDimensionalArray', function() {
                 expect(result).to.equal(3);
 
 
-          });
+            });
 
-      });
+         });
       
 
    
